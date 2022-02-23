@@ -15,7 +15,7 @@ purger nvidia*
 chercher la nouvelle version du driver + installer
 ```shell
 @-dell:~$ apt search nvidia-driver
-@-dell:~$ sudo apt install nvidia-driver-390
+@-dell:~$ sudo apt install nvidia-driver-470
 ```
 verif nvidia-smi. il peut être nécessaire de switcher de prime select
 @-dell:~$ nvidia-smi
@@ -25,10 +25,7 @@ verif nvidia-smi. il peut être nécessaire de switcher de prime select
 
 
 
-
-
-
-#### voir les versions actuelles de cuda, du driver,... 
+#### ou voir la version actuelles du driver
 ```shell
 (base) @-dell:~$ nvidia-smi
 +-----------------------------------------------------------------------------+
@@ -43,6 +40,26 @@ verif nvidia-smi. il peut être nécessaire de switcher de prime select
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
 ```
+
+ ### installer 
+dans l'environnement
+
+(monai) @-dell:~$ LD_LIBRARY_PATH='/home/lmaintier/miniconda3/envs/monai/lib/'
+(monai) @-dell:~$ export LD_LIBRARY_PATH
+(monai) @-dell:~$ python
+Python 3.8.12 (default, Oct 12 2021, 13:49:34) 
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow
+>>> tensorflow.config.get_visible_devices()
+2022-02-23 15:56:09.916835: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:936] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-02-23 15:56:09.932155: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:936] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-02-23 15:56:09.932568: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:936] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+[PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU'), PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+
+
+
+
 
 #### Voir la version de cuda compilation tools
 ```shell
