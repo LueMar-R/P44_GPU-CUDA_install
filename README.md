@@ -5,6 +5,8 @@
 (base) @-dell:~$ lspci | grep -i nvidia
 01:00.0 3D controller: NVIDIA Corporation GM107GLM [Quadro M620 Mobile] (rev a2)
 ```
+#### rechercher le driver corespondant 
+![https://www.nvidia.fr/Download/](https://www.nvidia.fr/Download/)
 
 
 #### voir les versions actuelles de cuda, du driver,... 
