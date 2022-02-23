@@ -1,12 +1,15 @@
 # P44_GPU-CUDA_install
 
-
-lspci | grep -i nvidia
+#### affichier spec du GPU
+```shell
+(base) @-dell:~$ lspci | grep -i nvidia
+01:00.0 3D controller: NVIDIA Corporation GM107GLM [Quadro M620 Mobile] (rev a2)
+```
 
 
 #### voir les versions actuelles de cuda, du driver,... 
 ```shell
-nvidia-smi
+(base) @-dell:~$ nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 470.74       Driver Version: 470.74       CUDA Version: 11.4     |
 |-------------------------------+----------------------+----------------------+
