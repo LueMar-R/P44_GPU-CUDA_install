@@ -8,6 +8,25 @@
 #### rechercher le driver corespondant 
 ![https://www.nvidia.fr/Download/](https://www.nvidia.fr/Download/)
 
+purger nvidia*
+```shell
+@-dell:~$ sudo apt-get remove --purge '^nvidia-.*'
+```
+chercher la nouvelle version du driver + installer
+```shell
+@-dell:~$ apt search nvidia-driver
+@-dell:~$ sudo apt install nvidia-driver-390
+```
+verif nvidia-smi. il peut être nécessaire de switcher de prime select
+@-dell:~$ nvidia-smi
+@-dell:~$ sudo prime-select intel
+@-dell:~$ sudo prime-select nvidia
+@-dell:~$ sudo reboot
+
+
+
+
+
 
 #### voir les versions actuelles de cuda, du driver,... 
 ```shell
