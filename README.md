@@ -42,8 +42,15 @@ verif nvidia-smi. il peut être nécessaire de switcher de prime select
 +-------------------------------+----------------------+----------------------+
 ```
 
- ### installer 
-dans l'environnement
+#### installer dans l'environnement
+```shell
+(monai) @-dell:~$ conda search cudnn
+```
+choisir la version de CuDNN/ CUDA qui matche la compute capability
+```shell
+(monai) @-dell:~$ conda install cudnn=8.2.1=cuda11.3_0
+```
+
 ```shell
 (monai) @-dell:~$ LD_LIBRARY_PATH='/home/lmaintier/miniconda3/envs/monai/lib/'
 (monai) @-dell:~$ export LD_LIBRARY_PATH
