@@ -18,11 +18,12 @@ chercher la nouvelle version du driver + installer
 @-dell:~$ sudo apt install nvidia-driver-470
 ```
 verif nvidia-smi. il peut être nécessaire de switcher de prime select
+```shell
 @-dell:~$ nvidia-smi
 @-dell:~$ sudo prime-select intel
 @-dell:~$ sudo prime-select nvidia
 @-dell:~$ sudo reboot
-
+```
 
 
 #### ou voir la version actuelles du driver
@@ -43,7 +44,7 @@ verif nvidia-smi. il peut être nécessaire de switcher de prime select
 
  ### installer 
 dans l'environnement
-
+```shell
 (monai) @-dell:~$ LD_LIBRARY_PATH='/home/lmaintier/miniconda3/envs/monai/lib/'
 (monai) @-dell:~$ export LD_LIBRARY_PATH
 (monai) @-dell:~$ python
@@ -56,7 +57,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 2022-02-23 15:56:09.932155: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:936] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
 2022-02-23 15:56:09.932568: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:936] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
 [PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU'), PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
-
+```
 
 
 
